@@ -29,9 +29,13 @@ class bird {
 
 }
 class cat {
+	public $orgin = "feline";
+	public $breed = "yellow";
+	public $gender = "male";
+	public $price = 12;
 
 }
 class mouse{
-	
+
 }
 ?>
