@@ -1,3 +1,5 @@
+<!-- lecture 1 -->
+
 <?php
 // Example 1
 class bird{
@@ -118,6 +120,83 @@ $mouse1->orgin = "rodent";
 
 Print "The orgin of the mouse is {$mouse1->getOrgin}.";
 
+
+
+?>
+
+______________________________________________________________________________________________________________________________
+
+<!-- Lecture 2 -->
+
+<!-- Example 1 -->
+<?php
+class Bird {
+	public $orgin = "default name";
+	public $breed = "best breed";
+	public $gender = "female";
+	public $price = 0;
+
+		function__construct($orgin, $breed, $gender, $price){
+			$this->orgin = $orgin;
+			$this->breed = $breed;
+			$this->gender = $gender;
+			$this->$price;
+		}
+		function getOrgin(){
+			return "{$this->orgin}" .
+			"{$this->orgin}";
+		}
+	} 
+
+class cat {
+	public $orgin = "feline";
+	public $breed = "yellow";
+	public $gender = "male";
+	public $price = 12;
+
+	function__contruct($orgin, $breed, $gender, $price){
+		$this->orgin = $orgin;
+		$this->breed = $breed;
+		$this->gender = $gender;
+		$this->price = $price;
+	}
+
+	function getBreed(){
+		return "{$this->breed}" .
+		"{$this->breed}";
+	}
+}
+
+class mouse {
+	public $orgin = "rodent";
+	public $breed = "rat";
+	public $gender = "female";
+	public $price = 20;
+
+	function__contruct($orgin, $breed, $gender, $price){
+		$this->orgin = $orgin;
+		$this->breed = $breed;
+		$this->gender = $gender;
+		$this->price = $price;
+	}
+
+	function getGender(){
+		return "{$this->gender}" .
+		"{$this->gender}";
+	}
+}
+
+// Example 2
+
+$bird1 = new Bird("Woodstock", "Snoopy", "YellowBird" );
+print "Bird 1: {$bird1->getBreed()}/n";
+// /n creates a new line for your line of writing to go on
+
+$cat1 = new Cat("Garfield", "Bart", "OrangeCat");
+print "Cat 1: {$cat1->getGender()}";
+
+$mouse1 = new Mouse("jerry", "tom", "BrownMouse");
+print: "Mouse 1: {$mouse1->orgin()}";
 
 
 ?>
