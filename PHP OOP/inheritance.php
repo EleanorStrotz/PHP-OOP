@@ -31,7 +31,7 @@ class Eleanor extends Person
 	}
 }
 
-$person1 = new Eleanor("eleanor", "strotz","female", "brown");
+$person1 = new Eleanor("Eleanor", " Strotz"," female ", " brown");
 echo $person1->greeting();
 
 
@@ -74,7 +74,7 @@ function hello()
 
  }
 
-$Politician1 = new Obama("barack", "Obama","good" , "democrat" , "Joe Biden");
+$Politician1 = new Obama("Barack", " Obama "," good " , " Democrat " , " Joe Biden");
 echo $Politician1->hello();
 
 
@@ -107,7 +107,7 @@ class Singers
 	 function ello()
 	{
 		return "</br>Hey! I'm famous! My name is " . $this->firstname . $this->lastname . " my first good song was " . $this->hitsingle . 
-		" my only good album was" . $this->albums;
+		", my only good album was" . $this->albums;
 	}
  }
 
