@@ -92,24 +92,26 @@ class Singers
 		$this->lastname = $lastname;
 		$this->hitsingle = $hitsingle;
 	}
-	function ello()
-	{
-		return "</br>Hey! I'm famous! My name is " . $this->firstname . $this->lastname . " my first good song was " . $this->hitsingle;
-	}
 }
   class justinbieber extends Singers 
   {
   	function __construct($firstname, $lastname, $hitsingle, $albums) {
-  		
+  		parent::__construct($firstname, $lastname, $hitsingle);
+  		$this->albums = $albums;
   	}
 
 	 function set_famous ()
 	 {
-		 $this->famous = $this->$ello;
+		 $this->famous = $this->$albums;
 	 }
+	 function ello()
+	{
+		return "</br>Hey! I'm famous! My name is " . $this->firstname . $this->lastname . " my first good song was " . $this->hitsingle . 
+		" my only good album was" . $this->albums;
+	}
  }
 
- $Singers1 = new Singers("justin", "bieber", "baby");
+ $Singers1 = new justinbieber("Justin", " Bieber", "baby", " nothing");
  echo $Singers1->ello();
 ?>
 
