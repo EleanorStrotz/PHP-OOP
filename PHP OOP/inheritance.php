@@ -16,18 +16,22 @@ class Person
 	function greeting()
 	{
 		return "Hello my name is " . $this->firstname . 
-		$this->lastname . " I am a " . $this->gender;
+		$this->lastname . " I am a " . $this->gender . "my haircolor is " . $this->haircolor;
 	}
 }
 
 class Eleanor extends Person
 {
+	function __construct($firstname, $lastname, $gender, $haircolor) {
+		parent::__construct($firstname, $lastname, $gender);
+		$this->haircolor = $haircolor;
+	}
 	function set_newperson(){
-		$this->newperson = $this->gender;
+		$this->newperson = $this->haircolor;
 	}
 }
 
-$person1 = new Eleanor("eleanor", "strotz","female");
+$person1 = new Eleanor("eleanor", "strotz","female", "brown");
 echo $person1->greeting();
 
 
@@ -47,22 +51,30 @@ class Politician
 		$this->views = $views;
 		$this->party = $party;
 	}
-	function hello()
-	{
-		return "</br>Hello my name is " . $this->firstname. $this->lastname . "I am apart of the " . $this->party. "party.";
-	}
+	
 
 }
  class Obama extends Politician 
  {
+ 	public $viceprez;
+
+ 	function __construct($firstname, $lastname, $views, $party, $viceprez) {
+ 		parent::__construct($firstname, $lastname, $views, $party);
+ 		$this->viceprez = $viceprez;
+ 	}
 
 	 function set_president () 
 	 {
-		 $this->president = $this->$hello;
+		 $this->president = $this->$viceprez;
 	 }
+function hello()
+	{
+		return "</br>Hello my name is " . $this->firstname. $this->lastname . "I am apart of the " . $this->party. "party. My vice president is " . $this->viceprez;
+	}
+
  }
 
-$Politician1 = new Politician("barack", "Obama","good" , "democrat");
+$Politician1 = new Obama("barack", "Obama","good" , "democrat" , "Joe Biden");
 echo $Politician1->hello();
 
 
@@ -87,6 +99,9 @@ class Singers
 }
   class justinbieber extends Singers 
   {
+  	function __construct($firstname, $lastname, $hitsingle, $albums) {
+  		
+  	}
 
 	 function set_famous ()
 	 {
