@@ -16,20 +16,18 @@ class Person
 	function greeting()
 	{
 		return "Hello my name is " . $this->firstname . 
-		$this->lastname . "I am a " . $this->gender;
+		$this->lastname . " I am a " . $this->gender;
 	}
 }
 
 class Eleanor extends Person
 {
-	var $newperson;
-
-	function set_newperson (hello) {
-		$this->newperson = $hello;
+	function set_newperson(){
+		$this->newperson = $this->gender;
 	}
 }
 
-$person1 = new Person("eleanor", "strotz","female");
+$person1 = new Eleanor("eleanor", "strotz","female");
 echo $person1->greeting();
 
 
@@ -51,21 +49,20 @@ class Politician
 	}
 	function hello()
 	{
-		return "Hello my name is " . $this->firstname. $this->lastname . "I am apart of the " . $this->party. "party.";
+		return "</br>Hello my name is " . $this->firstname. $this->lastname . "I am apart of the " . $this->party. "party.";
 	}
 
 }
-class Obama extends Politician 
-{
-	var $president;
+ class Obama extends Politician 
+ {
 
-	function set_president (hello) 
-	{
-		$this->president = $hello;
-	}
-}
+	 function set_president () 
+	 {
+		 $this->president = $this->$hello;
+	 }
+ }
 
-$Politician1 = new Politician("barack", "Obama", "democrat");
+$Politician1 = new Politician("barack", "Obama","good" , "democrat");
 echo $Politician1->hello();
 
 
@@ -85,33 +82,19 @@ class Singers
 	}
 	function ello()
 	{
-		return "Hey! I'm famous! My name is " . $this->firstname . $this->lastname "my first good song was " . $this->hitsingle;
+		return "</br>Hey! I'm famous! My name is " . $this->firstname . $this->lastname . " my first good song was " . $this->hitsingle;
 	}
 }
-function justinbieber extends Singers {
-	var $famous;
+  class justinbieber extends Singers 
+  {
 
-	function set_famous (ello)
-	{
-		$this->famous = $ello;
-	}
-}
+	 function set_famous ()
+	 {
+		 $this->famous = $this->$ello;
+	 }
+ }
 
-$Singers1 = new Singers("justin", "bieber", "baby");(
-echo $Singers1->ello();
+ $Singers1 = new Singers("justin", "bieber", "baby");
+ echo $Singers1->ello();
 ?>
 
-<!-- I keep getting errors with my code I dont really understand it. It got explained to me today
-in class but i still dont get it -->
-
-<!-- { 
-	public $eyecolor;
-	public function __construct($firstname, $lastname, $gender, $eyecolor)
-	{
-		super($firstname, $lastname, $gender)
-		$this->eyecolor = $eyecolor;
-	} 
-
-$person1 = new Person("eleanor", "strotz","female");
-echo $person1->greeting();
- -->
